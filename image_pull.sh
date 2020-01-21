@@ -5,7 +5,7 @@ kill -9 `ps -ef | grep 'node ./bin/www' | awk '{print $2}'`
 cd image
 git pull origin master
 cd ../
-mv image/players server/backend
-mv image/playersAction server/backend
+mv image/players/ server/backend/players/
+mv image/playersAction/ server/backend/playersAction
 cd $REPOSITORY/server/backend
 nohup npm start &
