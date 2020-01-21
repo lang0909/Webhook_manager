@@ -1,6 +1,16 @@
-REPOSITORY="/root/music_chart"
+REPOSITORY="/home/ec2-user"
 cd $REPOSITORY
-pm2 stop app.js
-git pull
+sudo su
+cd server
+git pull origin master
+cd frontend
 npm install
-pm2 start app.js
+cd ../
+cd backend
+npm install
+cd ../
+cd frontend
+npm run build
+cd ../
+cd backend
+nohup npm start &
