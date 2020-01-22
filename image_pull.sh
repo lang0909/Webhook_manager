@@ -5,8 +5,8 @@ cd image
 git fetch --all
 git reset --hard origin/master
 git pull origin master
-cd ../
-mv image/players/ server/backend/players/
-mv image/playersAction/ server/backend/playersAction/
+cd $REPOSITORY
+mv image/players/* server/backend/players/
+mv image/playersAction/* server/backend/playersAction/
 cd $REPOSITORY/server/backend
 nohup npm start &
