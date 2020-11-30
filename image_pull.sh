@@ -1,4 +1,4 @@
-REPOSITORY="/home/ec2-user"
+REPOSITORY="/home/ubuntu"
 cd $REPOSITORY
 kill -9 `ps -ef | grep 'node ./bin/www' | awk '{print $2}'`
 cd image
